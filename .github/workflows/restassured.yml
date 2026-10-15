@@ -13,14 +13,11 @@ jobs:
     - name: setup-java
       uses: actions/setup-java@v5
       with:
-          java-version: '17'
-          distribution: 'temurin'
+          distribution: 'temurin'     # or another distribution you prefer
+          java-version: '17'         # set to the Java version your project needs
 
-    - name: Run Maven Command
-      run: mvn clean test
-
-    - name: Run Maven Command
-      run: mvn install
+    - name: Build and test
+      run: mvn -B -V clean install
 
     
     
