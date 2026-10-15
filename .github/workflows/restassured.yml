@@ -1,0 +1,27 @@
+name: Rest assured automation
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    -  name: checkout-code
+       uses: actions/checkout@v4
+    
+    -  name: setup-java
+       uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+
+    - name: run test
+      uses: mvn clean test
+
+    -name: run test by mvn
+    uses:  mvn install
+
+      
+        
+
+
