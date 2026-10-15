@@ -12,6 +12,14 @@ jobs:
     
     -  name: setup-java
        uses: actions/setup-java@v4
+
+    - name: Run Maven Command
+      run: mvn clean test
+
+    - name: Run Maven Command
+      run: mvn install
+
+    
     
         
 
