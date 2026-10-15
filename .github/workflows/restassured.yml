@@ -10,8 +10,11 @@ jobs:
     -  name: checkout-code
        uses: actions/checkout@v4
     
-    -  name: setup-java
-       uses: actions/setup-java@v4
+    - name: setup-java
+      uses: actions/setup-java@v5
+      with:
+          java-version: '17'
+          distribution: 'temurin'
 
     - name: Run Maven Command
       run: mvn clean test
